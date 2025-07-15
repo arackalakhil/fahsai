@@ -516,3 +516,71 @@
 .theme-dark .coming-soon-section .coming-soon-box #timer .count::after {
   background-color: #0e0e0e;
 }/*# sourceMappingURL=theme-dark.css.map */
+
+/* /////////////////////////////////////////////////////////////?////////////////////////////////////////////////////////////// */
+.theme-light body {
+  background-color: wheat; /* your light pink background */
+  color: #000000;            /* black text */
+}
+
+
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+
+
+.grid-container1 {
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  gap: 2rem;
+}
+
+.card1 {
+  --grad: red, blue;
+  padding: 2.5rem;
+  background-image: linear-gradient(to bottom left, #e0e4e5, #f2f6f9);
+  border-radius: 2rem;
+  gap: 1.5rem;
+  display: grid;
+  grid-template: 'title1 icon1' 'content1 content1' 'bar1 bar1' / 1fr auto;
+  font-family: system-ui, sans-serif;
+  color: #444447;
+  box-shadow: 
+    inset -2px 2px hsl(0 0 100% / 1),
+    -20px 20px 40px hsl(0 0 0 / .25);
+}
+
+.card1 .title1 {
+  font-size: 1.5rem;
+  grid-area: title1;
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.card1 .icon1 {
+  grid-area: icon1;
+  font-size: 3rem;
+}
+
+.card1 .icon1 > i {
+  color: transparent;
+  background: linear-gradient(to right, var(--grad));
+  background-clip: text;
+}
+
+.card1 .content1 {
+  grid-area: content1;
+}
+
+.card1 .content1 > *:first-child { margin-top: 0rem; }
+.card1 .content1 > *:last-child { margin-bottom: 0rem; }
+
+.card1::after {
+  content: "";
+  grid-area: bar1;
+  height: 2px;
+  background-image: linear-gradient(90deg, var(--grad));
+}
