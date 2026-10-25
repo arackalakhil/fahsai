@@ -99,6 +99,9 @@
   .home-banner-area .slider-item::after {
     background: rgba(10, 10, 10, 0.7);
   }
+  .home-banner-area .slider-item {
+    min-height: 500px;
+  }
   .home-banner-area.banner-style-two .banner-content {
     padding: 70px 0;
   }
